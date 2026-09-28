@@ -5,10 +5,10 @@ import { join, resolve } from 'node:path';
 
 const root = resolve(import.meta.dirname, '..');
 const outDir = mkdtempSync(join(tmpdir(), 'modular-resume-closure-'));
-const tsc = join(root, 'node_modules', '.bin', process.platform === 'win32' ? 'tsc.cmd' : 'tsc');
+const tsc = join(root, 'node_modules', 'typescript', 'bin', 'tsc');
 
 try {
-  execFileSync(tsc, [
+  execFileSync(process.execPath, [tsc,
     'src/integration-tests/real_resume_closure.ts',
     'src/integration-tests/v973_jd_email_cc.ts',
     'src/integration-tests/v1_freeze_composer_quality.ts',
