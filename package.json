@@ -20,8 +20,8 @@
     "desktop:prepare": "node electron/prepare-standalone.mjs",
     "desktop:dev": "npm run build && npm run desktop:prepare && electron .",
     "desktop:build": "npm run build && npm run desktop:prepare",
-    "dist:win": "npm run desktop:stage && npm run desktop:build && electron-builder --win nsis --x64",
-    "desktop:stage": "rm -rf .desktop-stage && cp -RL .next/standalone .desktop-stage"
+    "dist:win": "npm run desktop:build && npm run desktop:stage && electron-builder --win nsis --x64",
+    "desktop:stage": "node electron/stage-standalone.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
