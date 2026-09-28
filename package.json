@@ -60,10 +60,11 @@
     "extraResources": [
       {
         "from": ".desktop-stage",
-        "to": "app-server",
-        "filter": [
-          "**/*"
-        ]
+        "to": "app-server"
+      },
+      {
+        "from": ".desktop-stage/node_modules",
+        "to": "app-server/node_modules"
       }
     ],
     "directories": {
