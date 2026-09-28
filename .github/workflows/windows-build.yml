@@ -44,7 +44,33 @@ jobs:
             Select-Object FullName
       - name: Build Windows installer
         run: npm run dist:win
+      - name: Verify packaged runtime
 
+        shell: powershell
+
+        run: |
+
+          Write-Host "=== packaged app-server ==="
+
+          Get-ChildItem "dist-windows\win-unpacked\resources\app-server" -Force
+
+          Write-Host "=== packaged server.js ==="
+
+          Test-Path "dist-windows\win-unpacked\resources\app-server\server.js"
+
+          Write-Host "=== packaged Next runtime ==="
+
+          Test-Path "dist-windows\win-unpacked\resources\app-server\node_modules\next"
+
+          if (-not (Test-Path "dist-windows\win-unpacked\resources\app-server\node_modules\next")) {
+
+            Write-Error "PACKAGING ERROR: node_modules\next is missing from packaged runtime."
+
+            exit 1
+
+          }
+
+          Write-Host "PACKAGED RUNTIME VERIFIED"
       - name: Upload Windows installer
         uses: actions/upload-artifact@v4
         with:
