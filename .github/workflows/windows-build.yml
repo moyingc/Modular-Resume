@@ -22,7 +22,26 @@ jobs:
 
       - name: Verify production
         run: npm run verify:production
+      - name: Build Next for inspection
+        run: npm run desktop:build
 
+      - name: Inspect Next standalone
+        shell: powershell
+        run: |
+          Write-Host "=== standalone root ==="
+          Get-ChildItem ".next\standalone" -Force
+
+          Write-Host "=== server.js locations ==="
+          Get-ChildItem ".next\standalone" -Recurse -Filter "server.js" |
+            Select-Object FullName
+
+          Write-Host "=== next package locations ==="
+          Get-ChildItem ".next\standalone" -Recurse -Directory -Filter "next" |
+            Select-Object FullName
+
+          Write-Host "=== node_modules locations ==="
+          Get-ChildItem ".next\standalone" -Recurse -Directory -Filter "node_modules" |
+            Select-Object FullName
       - name: Build Windows installer
         run: npm run dist:win
 
