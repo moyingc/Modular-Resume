@@ -1,0 +1,205 @@
+.root{min-height:0;height:100%;display:grid;grid-template-rows:auto minmax(0,1fr) auto}.toolbar,.footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 12px;background:#fff;border-bottom:1px solid #e4e7ea;font-size:11px}.footer{border-top:1px solid #e4e7ea;border-bottom:0}.pageNav{display:flex;align-items:center;gap:8px}.pageNav button,.settings{border:1px solid #d9dde2;border-radius:7px;background:#fff;padding:5px 8px;cursor:pointer}.pageNav button:disabled{opacity:.35;cursor:default}.stage{min-height:0;overflow:auto;background:#eef0f3}.footer{color:#666d74}
+
+
+@media print {
+  .toolbar,
+  .footer {
+    display: none !important;
+  }
+
+  .root,
+  .stage {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+  }
+}
+
+
+/* ===== Dedicated preview viewport ===== */
+.root {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.toolbar,
+.footer {
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+}
+
+.stage {
+  min-height: 0;
+  overflow-x: auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  background: #e9ecef;
+  padding: 18px 14px 32px;
+  scrollbar-gutter: stable;
+}
+
+/* A little visual separation makes the physical page boundary obvious. */
+.stage > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  .stage {
+    padding: 12px 8px 24px;
+  }
+}
+
+
+.footerStatus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.fitBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 3px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.fit_safe {
+  background: #e9f5ed;
+  color: #2f6f46;
+}
+
+.fit_warning {
+  background: #fff3cf;
+  color: #8a6518;
+}
+
+.fit_overflow {
+  background: #fde6e6;
+  color: #9a3434;
+}
+
+
+/* V10: printing uses the exact same preview DOM tree. */
+@media print {
+  .root,
+  .stage {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .toolbar,
+  .footer {
+    display: none !important;
+  }
+}
+
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.pdfStatus {
+  color: #6d747c;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.updatePdfButton {
+  border: 1px solid #cfd4da;
+  background: #f8f9fa;
+  border-radius: 7px;
+  padding: 6px 9px;
+  color: #2f353b;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.updatePdfButton:disabled {
+  opacity: .45;
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  .pdfStatus {
+    display: none;
+  }
+
+  .toolbarActions {
+    gap: 5px;
+  }
+
+  .updatePdfButton,
+  .settings {
+    padding: 6px 7px;
+    font-size: 10px;
+  }
+}
+
+
+/* V13: PDF preview controls follow matte pink UI, PDF page itself remains neutral. */
+.toolbar,
+.footer {
+  background: rgba(250,246,248,.96);
+  border-color: rgba(167,135,149,.2);
+  color: #62565c;
+}
+
+.stage {
+  background:
+    linear-gradient(180deg, #eee8eb 0%, #e9e3e6 100%);
+}
+
+.settings,
+.updatePdfButton,
+.pageNav button {
+  border-color: rgba(159,126,140,.25);
+  background: rgba(255,255,255,.78);
+  color: #6f5964;
+}
+
+.updatePdfButton {
+  background: #ead6df;
+  border-color: #d7b3c2;
+  color: #744f60;
+}
+
+.pdfStatus {
+  color: #907985;
+}
+
+
+/* FINAL POLISH */
+.toolbar,
+.footer {
+  background: rgba(251,247,249,.96) !important;
+  border-color: rgba(155,116,134,.18) !important;
+}
+
+.stage {
+  background:
+    linear-gradient(180deg, #eee8eb 0%, #e9e3e6 100%) !important;
+}
+
+.updatePdfButton {
+  background: #ead7df !important;
+  border-color: #d6b0bf !important;
+  color: #744e60 !important;
+}

@@ -1,0 +1,30 @@
+{
+  "id": "myc-canada-ats-standard",
+  "name": "Canada ATS Standard",
+  "source": "json",
+  "createdAt": "2026-09-10T00:00:00.000Z",
+  "pageSettings": {
+    "paperSize": "letter",
+    "fontFamily": "Arial",
+    "bodyFontSize": 10,
+    "density": "standard",
+    "marginPreset": "standard"
+  },
+  "defaultSectionLayout": "list",
+  "sectionLayouts": {
+    "summary": "list",
+    "work-experience": "list",
+    "projects": "list",
+    "skills": "row-first-2col",
+    "education": "list",
+    "training": "list",
+    "certifications": "list",
+    "additional-experience": "list",
+    "additional-capabilities": "list"
+  },
+  "notes": [
+    "Conservative single-flow ATS-oriented resume format.",
+    "Skills use row-first two-column layout; primary experience sections remain list-based.",
+    "Template contains presentation settings only and does not contain candidate data, target page count, or export filename."
+  ]
+}

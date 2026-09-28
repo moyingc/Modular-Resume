@@ -1,0 +1,7 @@
+.backdrop{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;padding:20px;background:rgba(17,20,24,.3)}.panel{width:min(720px,100%);max-height:88dvh;overflow:auto;border-radius:18px;background:#fff;box-shadow:0 24px 70px rgba(0,0,0,.2)}.header{display:flex;justify-content:space-between;gap:16px;padding:18px 20px;border-bottom:1px solid #eceef1}.header h2,.header p{margin:0}.header p{margin-top:4px;color:#747a81;font-size:12px}.header button{width:34px;height:34px;border:1px solid #d9dde2;border-radius:8px;background:#fff;cursor:pointer}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:18px 20px}.card{display:grid;gap:8px;padding:12px;border:1px solid #e1e4e8;border-radius:12px;background:#fafbfc}.card span{font-size:11px;font-weight:700;color:#5e646b}.card input,.card select{width:100%;box-sizing:border-box;border:1px solid #d9dde2;border-radius:8px;background:#fff;padding:9px 10px}.layoutBlock{display:grid;gap:12px;padding:18px 20px 20px;border-top:1px solid #eceef1}.layoutBlock p{margin:4px 0 0;color:#747a81;font-size:12px}@media(max-width:640px){.backdrop{place-items:end center;padding:0}.panel{border-radius:18px 18px 0 0}.grid{grid-template-columns:1fr}}
+
+@media print {
+  .backdrop {
+    display: none !important;
+  }
+}

@@ -1,0 +1,2959 @@
+.shell {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: #f4f5f7;
+  color: #17191c;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.topBar,
+.bottomBar {
+  background: #ffffff;
+  border-color: #e2e5e9;
+  border-style: solid;
+  border-width: 0 0 1px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 14px 20px;
+}
+
+.topBar h1,
+.panelHeader h2,
+.analysisBlock h3 {
+  margin: 0;
+}
+
+.topBar h1 {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+}
+
+.topBar span,
+.panelHeader p,
+.emptyText {
+  color: #6f747b;
+  font-size: 12px;
+}
+
+.topBar span {
+  display: block;
+  margin-top: 3px;
+}
+
+.topActions,
+.bottomActions,
+.controlGroup,
+.moduleToolbar,
+.panelHeader,
+.moduleRow,
+.metricRow {
+  display: flex;
+  align-items: center;
+}
+
+.topActions,
+.bottomActions {
+  gap: 8px;
+}
+
+.workspace {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(360px, 34fr) minmax(420px, 40fr) minmax(300px, 26fr);
+  gap: 1px;
+  background: #dfe2e6;
+}
+
+.panel {
+  min-width: 0;
+  min-height: 0;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px 12px;
+  border-bottom: 1px solid #eceef1;
+}
+
+.panelHeader h2 {
+  font-size: 14px;
+}
+
+.panelHeader p {
+  margin: 4px 0 0;
+}
+
+.smallBadge,
+.counter,
+.lockBadge,
+.score {
+  border-radius: 999px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.smallBadge,
+.counter {
+  background: #f0f2f5;
+  padding: 5px 8px;
+}
+
+.previewCanvas {
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+  padding: 28px;
+  display: grid;
+  place-items: start center;
+  background: #eef0f3;
+}
+
+.paper {
+  width: min(100%, 430px);
+  aspect-ratio: 210 / 297;
+  box-sizing: border-box;
+  background: white;
+  box-shadow: 0 5px 22px rgba(0, 0, 0, 0.11);
+  padding: 38px 34px;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8.8px;
+  line-height: 1.34;
+}
+
+.resumeHeader {
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #222;
+}
+
+.resumeHeader h1 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+
+.resumeHeader p,
+.resumeSection p {
+  margin: 0;
+}
+
+.resumeSection {
+  margin-top: 10px;
+}
+
+.resumeSection h2 {
+  margin: 0 0 5px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #555;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.previewEntry {
+  margin: 5px 0;
+}
+
+.previewEntry > span {
+  display: block;
+  color: #444;
+}
+
+.previewEntry ul {
+  margin: 3px 0 0 14px;
+  padding: 0;
+}
+
+.previewSkill {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.previewStatus {
+  padding: 10px 18px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e5e7ea;
+  font-size: 12px;
+}
+
+.previewStatus strong {
+  color: #2e6d46;
+}
+
+.moduleToolbar {
+  gap: 8px;
+  padding: 12px;
+  border-bottom: 1px solid #eceef1;
+}
+
+.searchInput,
+.jobTextarea,
+.selectControl {
+  border: 1px solid #d8dce1;
+  border-radius: 7px;
+  background: #ffffff;
+  outline: none;
+}
+
+.searchInput {
+  min-width: 0;
+  flex: 1;
+  padding: 9px 10px;
+  font-size: 12px;
+}
+
+.searchInput:focus,
+.jobTextarea:focus,
+.selectControl:focus {
+  border-color: #8e969f;
+  box-shadow: 0 0 0 2px rgba(57, 65, 75, 0.08);
+}
+
+.moduleList {
+  min-height: 0;
+  overflow: auto;
+  padding: 4px 0 18px;
+}
+
+.moduleRow {
+  min-height: 42px;
+  gap: 8px;
+  padding-right: 10px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.moduleRow:hover {
+  background: #f8f9fa;
+}
+
+.disclosure {
+  width: 20px;
+  border: 0;
+  background: transparent;
+  color: #6f747b;
+  cursor: pointer;
+}
+
+.disclosure:disabled {
+  cursor: default;
+}
+
+.moduleText {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.moduleTitleLine {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.moduleTitle {
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.moduleSubtitle,
+.moduleContent {
+  color: #777c83;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lockBadge {
+  background: #eee9df;
+  color: #665b48;
+  padding: 2px 6px;
+}
+
+.score {
+  background: #eaf0f7;
+  color: #35526f;
+  padding: 3px 6px;
+}
+
+.dragHandle {
+  color: #a0a5ac;
+  cursor: grab;
+  user-select: none;
+}
+
+.jobPanel {
+  padding-bottom: 14px;
+}
+
+.fieldLabel {
+  padding: 14px 16px 6px;
+  font-size: 11px;
+  font-weight: 650;
+  color: #555b62;
+}
+
+.jobTextarea {
+  min-height: 230px;
+  resize: vertical;
+  margin: 0 16px 10px;
+  padding: 11px;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.jobPanel > .primaryButton,
+.jobPanel > .secondaryButton {
+  margin: 0 16px;
+}
+
+.primaryButton,
+.secondaryButton,
+.iconButton {
+  border-radius: 7px;
+  padding: 8px 11px;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.primaryButton {
+  border: 1px solid #202328;
+  background: #202328;
+  color: #fff;
+}
+
+.secondaryButton,
+.iconButton {
+  border: 1px solid #d7dbe0;
+  background: #fff;
+  color: #2b2f34;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.divider {
+  height: 1px;
+  background: #eceef1;
+  margin: 16px 0;
+}
+
+.analysisBlock {
+  padding: 0 16px 16px;
+}
+
+.analysisBlock h3 {
+  margin-bottom: 9px;
+  font-size: 12px;
+}
+
+.keywordList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keywordList span {
+  border: 1px solid #d8e0e8;
+  background: #f4f7fa;
+  border-radius: 999px;
+  padding: 5px 8px;
+  font-size: 11px;
+}
+
+.emptyText {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.metricRow {
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0f1f3;
+  font-size: 11px;
+}
+
+.bottomBar {
+  border-width: 1px 0 0;
+  flex-wrap: wrap;
+}
+
+.controlGroup {
+  gap: 10px;
+  font-size: 12px;
+}
+
+.controlGroup > span {
+  font-weight: 650;
+}
+
+.controlGroup label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.selectControl {
+  padding: 7px 28px 7px 8px;
+  font-size: 12px;
+}
+
+.bottomActions {
+  margin-left: auto;
+  font-size: 12px;
+  color: #666c73;
+}
+
+.desktopControls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.tabletSwitcher,
+.mobileNav {
+  display: none;
+}
+
+.tabletSwitcherActive {
+  border-color: #202328;
+  background: #202328;
+  color: #ffffff;
+}
+
+@media (max-width: 1179px) and (min-width: 768px) {
+  .workspace {
+    grid-template-columns: minmax(320px, 0.9fr) minmax(420px, 1.1fr);
+    overflow: hidden;
+  }
+
+  .previewPanel {
+    min-height: 0;
+  }
+
+  .modulePanel,
+  .jobPanel {
+    grid-column: 2;
+    grid-row: 1;
+    min-height: 0;
+  }
+
+  .tabletHidden {
+    display: none !important;
+  }
+
+  .tabletSwitcher {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #eceef1;
+  }
+}
+
+@media (max-width: 767px) {
+  .shell {
+    min-height: 100dvh;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    overflow: hidden;
+  }
+
+  .topBar {
+    align-items: center;
+    flex-direction: row;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .topBar > div:first-child span {
+    display: none;
+  }
+
+  .topActions {
+    margin-left: auto;
+  }
+
+  .topActions .secondaryButton {
+    display: inline-flex;
+  }
+
+  .workspace {
+    display: block;
+    min-height: 0;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .panel {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .mobileHidden {
+    display: none !important;
+  }
+
+  .previewCanvas {
+    padding: 16px 12px 20px;
+    place-items: start center;
+  }
+
+  .paper {
+    width: min(100%, 390px);
+    min-height: 0;
+    padding: 28px 24px;
+  }
+
+  .moduleToolbar {
+    padding: 10px;
+  }
+
+  .moduleList,
+  .jobPanel {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .jobTextarea {
+    min-height: 220px;
+  }
+
+  .bottomBar {
+    position: relative;
+    z-index: 20;
+    align-items: center;
+    flex-direction: row;
+    gap: 8px;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    flex-wrap: nowrap;
+  }
+
+  .desktopControls {
+    display: none !important;
+  }
+
+  .mobileNav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .mobileNavButton {
+    border: 1px solid #d7dbe0;
+    background: #ffffff;
+    color: #3a3f45;
+    border-radius: 9px;
+    padding: 10px 6px;
+    font-size: 11px;
+    font-weight: 650;
+    cursor: pointer;
+    pointer-events: auto;
+    touch-action: manipulation;
+  }
+
+  .mobileNavButtonActive {
+    border-color: #202328;
+    background: #202328;
+    color: #ffffff;
+  }
+
+  .mobileSettingsBackdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: rgba(17, 20, 24, 0.28);
+    padding: 16px 12px max(16px, env(safe-area-inset-bottom));
+  }
+
+  .mobileSettingsSheet {
+    width: min(100%, 520px);
+    max-height: 78dvh;
+    overflow: auto;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+  }
+
+  .mobileSettingsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .mobileSettingsHeader h2 {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .mobileSettingsContent {
+    display: grid;
+    gap: 14px;
+  }
+
+  .mobileSettingsContent .controlGroup {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mobileSettingsContent .selectControl,
+  .mobileSettingsContent .primaryButton {
+    width: 100%;
+  }
+}
+
+/* ===== Module editor interactions ===== */
+
+.errorBanner {
+  padding: 8px 16px;
+  background: #fff4f4;
+  color: #8a2f2f;
+  font-size: 12px;
+  border-bottom: 1px solid #f1d6d6;
+}
+
+.liveBadge {
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: #eaf6ee;
+  color: #2e6d46;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.moduleTitleButton {
+  min-width: 0;
+  max-width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+}
+
+.inlineEditor {
+  width: 100%;
+  min-width: 80px;
+  border: 1px solid #9aa2ab;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 5px 7px;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.inlineEditor:focus {
+  border-color: #59616a;
+  box-shadow: 0 0 0 2px rgba(57, 65, 75, 0.08);
+}
+
+.rowActions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex: 0 0 auto;
+}
+
+.rowActionButton {
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7178;
+  font-size: 12px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.rowActionButton:hover:not(:disabled) {
+  border-color: #d7dbe0;
+  background: #ffffff;
+  color: #202328;
+}
+
+.rowActionButton:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.inlineAddMenu {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  padding: 5px;
+  border: 1px solid #e0e3e7;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.06);
+}
+
+.inlineAddMenu button {
+  border: 1px solid #d7dbe0;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 5px 8px;
+  color: #34383d;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.inlineAddMenu button:hover {
+  background: #f6f7f8;
+}
+
+@media (max-width: 767px) {
+  .moduleRow {
+    gap: 6px;
+  }
+
+  .rowActions {
+    gap: 2px;
+  }
+
+  .rowActionButton {
+    width: 30px;
+    height: 30px;
+  }
+
+  .score {
+    display: none;
+  }
+
+  .moduleTitleButton {
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .inlineAddMenu {
+    max-width: calc(100vw - 72px);
+    flex-wrap: wrap;
+  }
+}
+
+/* ===== Drag / delete / owner editor ===== */
+.errorBanner {
+  padding: 8px 16px;
+  background: #fff4f4;
+  color: #8a2f2f;
+  font-size: 12px;
+  border-bottom: 1px solid #f1d6d6;
+}
+
+.liveBadge {
+  border-radius: 999px;
+  padding: 5px 8px;
+  background: #eaf6ee;
+  color: #2e6d46;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ownerEditor {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.7fr) minmax(220px, 1.3fr);
+  gap: 10px 12px;
+  padding: 12px;
+  border-bottom: 1px solid #eceef1;
+  background: #fafbfc;
+}
+
+.ownerEditorHeader {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.ownerEditorHeader strong { font-size: 12px; }
+.ownerEditorHeader span { color: #777c83; font-size: 11px; }
+
+.ownerField {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.ownerField > span {
+  color: #5f656c;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ownerField input {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #d8dce1;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 8px 9px;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.ownerField input:focus {
+  border-color: #8e969f;
+  box-shadow: 0 0 0 2px rgba(57, 65, 75, 0.08);
+}
+
+.dragHandleButton {
+  width: 27px;
+  height: 30px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #969ca3;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.dragHandleButton:active { cursor: grabbing; }
+
+.draggingNode {
+  position: relative;
+  z-index: 30;
+  opacity: 0.72;
+}
+
+.draggingNode > .moduleRow {
+  background: #f4f6f8;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
+}
+
+.moduleTitleButton {
+  min-width: 0;
+  max-width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+}
+
+.inlineEditor {
+  width: 100%;
+  min-width: 80px;
+  box-sizing: border-box;
+  border: 1px solid #9aa2ab;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 5px 7px;
+  font: inherit;
+  font-size: 12px;
+  outline: none;
+}
+
+.rowActions {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex: 0 0 auto;
+}
+
+.rowActionButton {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #6b7178;
+  font-size: 13px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.rowActionButton:hover:not(:disabled) {
+  border-color: #d7dbe0;
+  background: #ffffff;
+  color: #202328;
+}
+
+.rowActionButton:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.deleteButton { color: #9a5050; }
+.deleteButton:hover:not(:disabled) {
+  border-color: #e6c9c9;
+  background: #fff7f7;
+  color: #7e3030;
+}
+
+.inlineAddMenu {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+  padding: 5px;
+  border: 1px solid #e0e3e7;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.06);
+}
+
+.inlineAddMenu button {
+  border: 1px solid #d7dbe0;
+  border-radius: 6px;
+  background: #ffffff;
+  padding: 5px 8px;
+  color: #34383d;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .ownerEditor { grid-template-columns: 1fr; }
+  .ownerEditorHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .moduleRow { gap: 5px; }
+  .dragHandleButton { width: 31px; height: 34px; }
+  .rowActions { gap: 2px; }
+  .rowActionButton { width: 32px; height: 32px; }
+  .score { display: none; }
+  .moduleTitleButton { white-space: normal; line-height: 1.25; }
+  .inlineAddMenu { max-width: calc(100vw - 86px); flex-wrap: wrap; }
+}
+
+
+/* ===== Import / typography / layout controls ===== */
+.numberControl {
+  width: 70px;
+  border: 1px solid #d8dce1;
+  border-radius: 7px;
+  background: #ffffff;
+  padding: 7px 8px;
+  font-size: 12px;
+  outline: none;
+}
+
+.numberControl:focus {
+  border-color: #8e969f;
+  box-shadow: 0 0 0 2px rgba(57, 65, 75, 0.08);
+}
+
+@media (max-width: 1300px) {
+  .desktopControls {
+    gap: 12px;
+  }
+
+  .controlGroup {
+    gap: 6px;
+  }
+}
+
+@media print {
+  .topBar,
+  .bottomBar,
+  .modulePanel,
+  .jobPanel,
+  .previewStatus,
+  .panelHeader {
+    display: none !important;
+  }
+
+  .shell,
+  .workspace,
+  .previewPanel,
+  .previewCanvas {
+    display: block !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+  }
+
+  .paper {
+    margin: 0 auto;
+    box-shadow: none;
+  }
+}
+
+
+/* ===== Integrated UI foundation ===== */
+.footerMeta {
+  color: #666d74;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.previewSectionContent {
+  display: grid;
+  gap: 3px 10px;
+}
+
+.previewSectionContent[data-layout="list"] {
+  grid-template-columns: 1fr;
+}
+
+.previewSectionContent[data-layout="grid-2x2"],
+.previewSectionContent[data-layout="grid-2x3"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.previewSectionContent[data-layout="grid-3x3"] {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.previewSectionContent[data-layout^="grid"] .previewSkill,
+.previewSectionContent[data-layout^="grid"] .previewEntry {
+  min-width: 0;
+  margin: 0;
+}
+
+.previewSectionContent[data-layout^="grid"] .previewEntry ul {
+  margin-left: 10px;
+}
+
+.modulePanel {
+  position: relative;
+}
+
+@media (max-width: 1500px) {
+  .moduleRow {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .desktopControls {
+    justify-content: flex-end;
+  }
+}
+
+/* ===== Pagination / editable subtitle / export parity V2 ===== */
+.moduleSubtitleButton {
+  align-self: flex-start;
+  max-width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: #777c83;
+  font: inherit;
+  font-size: 11px;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: text;
+}
+
+.moduleSubtitleButton:hover {
+  color: #333940;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+
+.subtitleEditor {
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.moduleListLoading {
+  display: grid;
+  place-items: start center;
+  padding-top: 28px;
+  color: #8a9097;
+  font-size: 12px;
+}
+
+/*
+ * Preview uses the real physical page dimensions, then visually scales them.
+ * This keeps line wrapping and pagination geometry aligned with print.
+ */
+.paper,
+.printPage {
+  box-sizing: border-box;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
+  background: #ffffff;
+  color: #111111;
+}
+
+.paper[data-paper="a4"],
+.printPage[data-paper="a4"] {
+  width: 210mm;
+  height: 297mm;
+}
+
+.paper[data-paper="letter"],
+.printPage[data-paper="letter"] {
+  width: 8.5in;
+  height: 11in;
+}
+
+.previewCanvas .paper {
+  zoom: 0.54;
+}
+
+.pageClip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.pageFlow {
+  width: 100%;
+  transform-origin: top left;
+  will-change: transform;
+}
+
+.printDocument {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .previewCanvas .paper {
+    zoom: 0.42;
+  }
+}
+
+@media print {
+  .shell {
+    display: none !important;
+  }
+
+  .printDocument {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+  }
+
+  .printPage {
+    display: block;
+    margin: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+
+/* ===== Print page count + preview internal scroll fix ===== */
+.previewPanel {
+  overflow: hidden;
+}
+
+.previewCanvas {
+  /* ResumeRenderer.stage is the only scroll container. */
+  flex: none;
+  min-height: max-content;
+  overflow: visible !important;
+  padding: 24px 24px 40px;
+}
+
+@media print {
+  .printDocument {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .printPage {
+    font-size: initial;
+    line-height: normal;
+    vertical-align: top;
+  }
+
+  .printPage[data-paper="a4"] {
+    width: 210mm;
+    height: 297mm;
+  }
+
+  .printPage[data-paper="letter"] {
+    width: 8.5in;
+    height: 11in;
+  }
+}
+
+
+/* ===== Resume layout polish + semantic pagination ===== */
+
+.resumeHeader {
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+}
+
+.resumeHeader h1 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: .01em;
+}
+
+.resumeHeader p {
+  font-size: .92em;
+  color: #383d43;
+}
+
+.resumeSection {
+  margin-top: 12px;
+  break-inside: avoid;
+}
+
+.resumeSection h2 {
+  margin: 0 0 7px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #33383d;
+  font-size: 1.04em;
+  font-weight: 700;
+  letter-spacing: .01em;
+  text-transform: none;
+}
+
+.previewEntry {
+  margin: 0 0 8px;
+  break-inside: avoid;
+}
+
+.previewEntry strong {
+  display: block;
+  font-size: 1em;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.previewEntry > span {
+  display: block;
+  margin-top: 1px;
+  color: #4e555d;
+  font-size: .95em;
+  line-height: 1.25;
+}
+
+.previewEntry ul {
+  margin: 4px 0 0 17px;
+  padding: 0;
+}
+
+.previewEntry li {
+  margin: 1px 0;
+  padding-left: 1px;
+  line-height: 1.32;
+}
+
+.previewEntry li::marker {
+  font-size: .78em;
+}
+
+.previewSkill {
+  display: block;
+  margin: 0;
+  padding: 1px 0;
+  line-height: 1.25;
+}
+
+.previewSectionContent[data-layout^="grid"] {
+  column-gap: 18px;
+  row-gap: 4px;
+  align-items: start;
+}
+
+.previewSectionContent[data-layout^="grid"] .previewSkill {
+  min-width: 0;
+}
+
+.resumeSemanticBlock {
+  break-inside: avoid;
+}
+
+.resumeSemanticChild {
+  break-inside: avoid;
+}
+
+/* Module editor owns its scroll. Header/owner/search stay visible. */
+.modulePanel {
+  min-height: 0;
+  overflow: hidden !important;
+}
+
+.moduleList {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+}
+
+.ownerEditor,
+.moduleToolbar,
+.tabletSwitcher,
+.panelHeader {
+  flex: 0 0 auto;
+}
+
+/* The whole app should not scroll just because the module tree is long. */
+.workspace {
+  min-height: 0;
+  overflow: hidden;
+}
+
+@media print {
+  .resumeSection,
+  .previewEntry,
+  .resumeSemanticBlock,
+  .resumeSemanticChild {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .resumeSection h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}
+
+
+/* ===== V5: hard viewport constraint so Module List really owns scrolling ===== */
+
+/*
+ * Previous versions only used min-height: 100dvh.
+ * That still allows the shell/grid row to grow with ModuleList content,
+ * so overflow-y:auto has no smaller box to scroll inside.
+ *
+ * The desktop/tablet workbench is a viewport application: constrain it to
+ * the viewport, then let each pane own its internal overflow.
+ */
+@media (min-width: 768px) {
+  .shell {
+    height: 100dvh;
+    min-height: 0;
+    max-height: 100dvh;
+    overflow: hidden;
+  }
+
+  .workspace {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    overflow: hidden !important;
+  }
+
+  .panel,
+  .modulePanel,
+  .previewPanel,
+  .jobPanel {
+    height: 100%;
+    min-height: 0;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .modulePanel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .moduleList {
+    flex: 1 1 0;
+    height: 0;
+    min-height: 0;
+    max-height: 100%;
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+    scrollbar-gutter: stable both-edges;
+    overscroll-behavior-y: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .ownerEditor,
+  .moduleToolbar,
+  .tabletSwitcher,
+  .modulePanel > .panelHeader {
+    flex: 0 0 auto;
+  }
+
+  /* Preview and Job Description also remain inside their pane. */
+  .previewPanel,
+  .jobPanel {
+    min-height: 0;
+  }
+}
+
+/* Visible scrollbar so it is obvious that Module Selection is its own viewport. */
+.moduleList {
+  scrollbar-width: thin;
+  scrollbar-color: #b9c0c8 transparent;
+}
+
+.moduleList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.moduleList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.moduleList::-webkit-scrollbar-thumb {
+  background: #c3c9d0;
+  border-radius: 999px;
+  border: 2px solid #ffffff;
+}
+
+.moduleList::-webkit-scrollbar-thumb:hover {
+  background: #9fa7b0;
+}
+
+
+/* ===== V6: real semantic page composition + reference-style ATS layout ===== */
+
+/*
+ * Measurement copy uses the same physical page and typography but is never
+ * shown. It allows us to assign entire top-level Sections to pages.
+ */
+.measurePaper {
+  position: fixed !important;
+  left: -200vw !important;
+  top: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  zoom: 1 !important;
+  transform: none !important;
+  z-index: -1 !important;
+}
+
+/* Resume styling: compact, structured, close to a conventional ATS resume. */
+.resumeHeader {
+  margin: 0 0 8px !important;
+  padding: 0 0 7px !important;
+  text-align: center;
+  border-bottom: 1.25px solid #202328;
+}
+
+.resumeHeader h1 {
+  margin: 0 0 4px !important;
+  font-size: 1.55em !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+}
+
+.resumeHeader p {
+  margin: 0 !important;
+  font-size: .82em !important;
+  line-height: 1.2 !important;
+  color: #202328 !important;
+}
+
+.resumeSection {
+  margin: 8px 0 0 !important;
+  padding: 0 !important;
+  break-inside: avoid;
+}
+
+.resumeSection h2 {
+  margin: 0 0 5px !important;
+  padding: 0 0 2px !important;
+  border-bottom: 1px solid #30343a !important;
+  font-size: 1.05em !important;
+  line-height: 1.15 !important;
+  font-weight: 800 !important;
+}
+
+.previewSectionContent {
+  display: grid;
+  gap: 3px 14px !important;
+}
+
+.previewEntry {
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+  break-inside: avoid;
+}
+
+.previewEntry strong {
+  display: block;
+  margin: 0 !important;
+  font-size: 1em !important;
+  line-height: 1.18 !important;
+  font-weight: 750 !important;
+}
+
+.previewEntry > span {
+  display: block;
+  margin: 1px 0 0 !important;
+  font-size: .88em !important;
+  line-height: 1.18 !important;
+  color: #30363d !important;
+}
+
+.previewEntry ul {
+  margin: 3px 0 0 18px !important;
+  padding: 0 !important;
+}
+
+.previewEntry li {
+  margin: 1px 0 !important;
+  padding: 0 !important;
+  line-height: 1.22 !important;
+}
+
+.previewLooseBullet {
+  margin: 1px 0 1px 18px !important;
+  line-height: 1.22 !important;
+}
+
+.previewSkill {
+  display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.previewSectionContent[data-layout="grid-2x2"],
+.previewSectionContent[data-layout="grid-2x3"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.previewSectionContent[data-layout="grid-3x3"] {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/*
+ * Preview page and printed page are now both composed from the same page model.
+ * No clipping or translateY pagination remains.
+ */
+.pageClip,
+.pageFlow {
+  width: auto !important;
+  height: auto !important;
+  overflow: visible !important;
+  transform: none !important;
+}
+
+@media print {
+  .printDocument {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .printPage {
+    display: block !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    box-shadow: none !important;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .printPage:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .resumeSection,
+  .previewEntry {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+
+/* ===== V7: preview / print size parity + hard printable boundary ===== */
+
+/*
+ * Preview and print must share the same physical box model.
+ * `physicalPage` is the single source of truth for page geometry.
+ */
+.physicalPage {
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+  background: #fff;
+}
+
+/* Real physical paper size. */
+.physicalPage[data-paper="a4"] {
+  width: 210mm !important;
+  height: 297mm !important;
+}
+
+.physicalPage[data-paper="letter"] {
+  width: 8.5in !important;
+  height: 11in !important;
+}
+
+/*
+ * The existing inline pageStyle still controls font and density.
+ * These hard physical paddings create a real printable safety boundary.
+ * They intentionally override pixel padding from older preview code.
+ */
+.physicalPage {
+  padding: 14mm 15mm !important;
+}
+
+/*
+ * Preview only scales the already-laid-out physical page.
+ * Layout width/height remain 210mm x 297mm / Letter.
+ */
+.previewCanvas .physicalPage {
+  zoom: 0.50;
+  max-width: none !important;
+  min-width: 0 !important;
+}
+
+/* Never allow resume content to visually escape the printable region. */
+.physicalPage .resumeHeader,
+.physicalPage .resumeSection,
+.physicalPage .previewSectionContent,
+.physicalPage .previewEntry {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.physicalPage .resumeHeader,
+.physicalPage .resumeSection {
+  overflow-wrap: anywhere;
+}
+
+.physicalPage .previewSectionContent {
+  min-width: 0;
+}
+
+.physicalPage .previewEntry,
+.physicalPage .previewSkill,
+.physicalPage .previewLooseBullet {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Page-limit safety visualization in preview. */
+.previewCanvas .physicalPage {
+  outline: 1px solid rgba(60, 66, 72, .22);
+  outline-offset: -1px;
+}
+
+/*
+ * Print: use exactly the same page dimensions and margins as preview.
+ * Avoid browser shrink-to-fit behavior caused by wider content.
+ */
+@media print {
+  html,
+  body {
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .printDocument {
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .printPage.physicalPage {
+    margin: 0 !important;
+    transform: none !important;
+    zoom: 1 !important;
+    overflow: hidden !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .printPage.physicalPage[data-paper="a4"] {
+    width: 210mm !important;
+    height: 297mm !important;
+  }
+
+  .printPage.physicalPage[data-paper="letter"] {
+    width: 8.5in !important;
+    height: 11in !important;
+  }
+}
+
+
+/* ===== V8: Page Fit + true semantic fragments + ATS reference layout ===== */
+
+/* Hidden measurement page must use the exact same physical geometry as preview/print. */
+.measurePaper {
+  position: fixed !important;
+  left: -300vw !important;
+  top: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  zoom: 1 !important;
+  transform: none !important;
+  max-width: none !important;
+  z-index: -100 !important;
+}
+
+/* Reference-inspired ATS layout: compact, strong hierarchy, no decorative columns. */
+.resumeHeader {
+  margin: 0 0 7px !important;
+  padding: 0 0 6px !important;
+  text-align: center;
+  border-bottom: 1.2px solid #111820 !important;
+}
+
+.resumeHeader h1 {
+  margin: 0 0 4px !important;
+  font-size: 1.62em !important;
+  line-height: 1 !important;
+  font-weight: 800 !important;
+}
+
+.resumeHeader p {
+  margin: 0 !important;
+  font-size: .84em !important;
+  line-height: 1.18 !important;
+  color: #222831 !important;
+}
+
+.resumeSection {
+  margin: 7px 0 0 !important;
+  padding: 0 !important;
+}
+
+.resumeSection h2 {
+  margin: 0 0 5px !important;
+  padding: 0 0 2px !important;
+  border-bottom: 1px solid #242a31 !important;
+  font-size: 1.08em !important;
+  line-height: 1.12 !important;
+  font-weight: 800 !important;
+}
+
+.continuationLabel {
+  margin-left: 6px;
+  color: #6d747c;
+  font-size: .68em;
+  font-weight: 600;
+}
+
+.previewSectionContent {
+  gap: 3px 16px !important;
+}
+
+.previewEntry {
+  margin: 0 0 5px !important;
+}
+
+.previewEntry strong {
+  display: block;
+  margin: 0 !important;
+  font-size: 1em !important;
+  line-height: 1.18 !important;
+  font-weight: 750 !important;
+}
+
+.previewEntry > span {
+  display: block;
+  margin: 1px 0 0 !important;
+  color: #333a42 !important;
+  font-size: .91em !important;
+  line-height: 1.18 !important;
+}
+
+.previewEntry ul {
+  margin: 3px 0 0 18px !important;
+  padding: 0 !important;
+}
+
+.previewEntry li {
+  margin: 1px 0 !important;
+  padding: 0 !important;
+  line-height: 1.23 !important;
+}
+
+.previewEntry li::marker {
+  font-size: .78em;
+}
+
+/* Direct text such as Summary should read as normal paragraph text, not an indented pseudo-bullet. */
+.previewLooseBullet {
+  margin: 1px 0 !important;
+  padding: 0 !important;
+  line-height: 1.25 !important;
+}
+
+.previewSkill {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.previewSectionContent[data-layout="grid-2x2"],
+.previewSectionContent[data-layout="grid-2x3"] {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+}
+
+.previewSectionContent[data-layout="grid-3x3"] {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+/* Page Fit status in the app footer. */
+.pageFitBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pageFit_safe {
+  background: #e9f5ed;
+  color: #2f6f46;
+}
+
+.pageFit_warning {
+  background: #fff3cf;
+  color: #8a6518;
+}
+
+.pageFit_overflow {
+  background: #fde6e6;
+  color: #9a3434;
+}
+
+/*
+ * Safari can create an extra physical page when a full-height A4 box also
+ * requests break-after: page. The fixed-height boxes naturally paginate, so
+ * explicitly disable forced breaks.
+ */
+@media print {
+  .printPage,
+  .printPage:last-child {
+    break-after: auto !important;
+    page-break-after: auto !important;
+  }
+
+  .printPage.physicalPage {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+
+/* ==========================================================
+   V10 — SINGLE RENDER TREE
+   Preview DOM === Print DOM.
+   No second PrintResumeDocument exists anymore.
+   ========================================================== */
+
+/* On screen: all physical pages exist, but only selected page is visible. */
+.previewPageStack {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.previewPageWrap {
+  display: none;
+}
+
+.previewPageActive {
+  display: block;
+}
+
+/*
+ * Critical invariant:
+ * The A4/Letter element itself keeps real physical dimensions.
+ * Screen preview only changes visual magnification.
+ */
+.previewPageWrap .physicalPage {
+  zoom: 0.50 !important;
+  transform: none !important;
+  margin: 0 !important;
+}
+
+/*
+ * We previously accumulated several print strategies in this CSS:
+ * - .shell display:none
+ * - .printDocument
+ * - cloned printPage nodes
+ * Those are explicitly overridden here.
+ */
+@media print {
+  /* Keep only the preview branch of the real application DOM. */
+  .topBar,
+  .bottomBar,
+  .modulePanel,
+  .jobPanel,
+  .errorBanner,
+  .previewPanel > .panelHeader,
+  .mobileNav {
+    display: none !important;
+  }
+
+  .shell {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .workspace {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .previewPanel {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    border: 0 !important;
+    background: #fff !important;
+  }
+
+  .previewCanvas {
+    display: block !important;
+    width: auto !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    background: #fff !important;
+  }
+
+  .previewPageStack {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Print every page from the SAME page array shown by preview navigation. */
+  .previewPageWrap,
+  .previewPageActive {
+    display: block !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .previewPageWrap .physicalPage {
+    zoom: 1 !important;
+    transform: none !important;
+    margin: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* The hidden measurement page is never printable. */
+  .measurePaper {
+    display: none !important;
+  }
+
+  /*
+   * No explicit break-after. Each physical page is exactly the target
+   * A4/Letter height and @page has zero margin, so the browser naturally
+   * advances to the next sheet without creating Safari's extra blank page.
+   */
+  .previewPageWrap {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Old duplicate print renderer is permanently disabled if stale CSS remains. */
+  .printDocument,
+  .printPage {
+    display: none !important;
+  }
+}
+
+
+/* ===== V11: PDF is now the authoritative preview/export artifact ===== */
+
+/*
+ * The old HTML paginator remains only as an invisible measurement probe so
+ * existing Page Fit percentage logic can be preserved. It is not user-visible
+ * and is never exported.
+ */
+.paginationProbeHost {
+  position: fixed !important;
+  left: -500vw !important;
+  top: 0 !important;
+  width: 210mm !important;
+  height: 297mm !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: -9999 !important;
+  overflow: visible !important;
+}
+
+/* Browser printing is no longer part of PDF export. */
+@media print {
+  .shell {
+    display: none !important;
+  }
+}
+
+
+/* ===== V13: matte mixed pink UI + myC brand ===== */
+
+.shell {
+  --pink-50: #fbf6f8;
+  --pink-100: #f5e9ee;
+  --pink-150: #eddde4;
+  --pink-200: #e5ccd6;
+  --pink-300: #d8b1c1;
+  --pink-400: #c690a6;
+  --pink-500: #ad7089;
+  --pink-600: #8f586f;
+  --ink-900: #2d262a;
+  --ink-700: #5e5359;
+  --ink-500: #8b7d84;
+  --warm-gray: #f4f1f2;
+  --mauve-gray: #d7cdd1;
+  --berry-shadow: rgba(108, 69, 86, .12);
+
+  background:
+    radial-gradient(circle at 18% 0%, rgba(229, 204, 214, .48), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(214, 187, 199, .32), transparent 28%),
+    #f6f2f4;
+  color: var(--ink-900);
+}
+
+.topBar,
+.bottomBar {
+  background: rgba(250, 246, 248, .94);
+  border-color: rgba(175, 143, 156, .22);
+  box-shadow: 0 7px 24px var(--berry-shadow);
+  backdrop-filter: blur(16px);
+}
+
+.brandBlock {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.brandMark {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto;
+  gap: 1px;
+  border: 1px solid rgba(160, 107, 131, .22);
+  border-radius: 14px 9px 14px 9px;
+  background:
+    linear-gradient(145deg, #f6e9ee 0%, #e8d4dd 48%, #d7b5c4 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.7),
+    0 7px 18px rgba(124, 82, 100, .13);
+  color: #735264;
+  letter-spacing: -.04em;
+}
+
+.brandMark span {
+  font-size: 10px;
+  font-weight: 600;
+  transform: translateY(2px);
+}
+
+.brandMark strong {
+  font-size: 22px;
+  line-height: 1;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.panel {
+  border-color: rgba(170, 143, 154, .23);
+  background: rgba(252, 249, 250, .88);
+  box-shadow: 0 8px 28px rgba(100, 72, 84, .07);
+}
+
+.panelHeader {
+  background:
+    linear-gradient(180deg, rgba(248,239,243,.92), rgba(250,247,248,.72));
+  border-color: rgba(170, 143, 154, .19);
+}
+
+.ownerEditor {
+  background: linear-gradient(180deg, #fbf7f9, #f8f3f5);
+  border-color: rgba(170, 143, 154, .18);
+}
+
+.searchInput,
+.ownerField input,
+.jobTextarea,
+.selectControl,
+.numberControl {
+  border-color: rgba(156, 126, 139, .28);
+  background: rgba(255,255,255,.84);
+  color: var(--ink-900);
+  box-shadow: inset 0 1px 2px rgba(94, 67, 78, .04);
+}
+
+.searchInput:focus,
+.ownerField input:focus,
+.jobTextarea:focus,
+.selectControl:focus,
+.numberControl:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 3px rgba(198, 144, 166, .14);
+}
+
+.primaryButton,
+.pdfGenerateButton {
+  border: 1px solid rgba(123, 78, 98, .18);
+  color: #fff;
+  background:
+    linear-gradient(135deg, #9e667f 0%, #b97994 55%, #936176 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.16),
+    0 6px 16px rgba(127, 79, 100, .16);
+}
+
+.pdfGenerateButton {
+  padding: 8px 12px;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.primaryButton:hover:not(:disabled),
+.pdfGenerateButton:hover:not(:disabled) {
+  filter: brightness(.98);
+  transform: translateY(-1px);
+}
+
+.pdfGenerateButton:disabled {
+  opacity: .55;
+  cursor: default;
+  transform: none;
+}
+
+.secondaryButton,
+.iconButton {
+  border-color: rgba(158, 126, 140, .25);
+  background: rgba(255,255,255,.72);
+  color: #705f68;
+}
+
+.secondaryButton:hover:not(:disabled),
+.iconButton:hover:not(:disabled) {
+  background: #f5e9ee;
+  border-color: rgba(173,112,137,.28);
+}
+
+.moduleRow {
+  border-bottom-color: rgba(169, 145, 154, .13);
+}
+
+.moduleRow:hover {
+  background: rgba(243, 230, 236, .55);
+}
+
+.moduleTitleButton {
+  color: #3d3439;
+}
+
+.moduleSubtitleButton,
+.moduleSubtitle {
+  color: #8a7780;
+}
+
+.dragHandleButton,
+.rowActionButton {
+  color: #9a7f8b;
+}
+
+.dragHandleButton:hover,
+.rowActionButton:hover:not(:disabled) {
+  color: #714f5e;
+  background: rgba(241, 225, 232, .75);
+}
+
+.liveBadge,
+.counter {
+  background: #f0dce5;
+  color: #86566c;
+  border-color: rgba(167, 111, 136, .18);
+}
+
+.previewPanel {
+  background: #ece6e9;
+}
+
+.keywordList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.keywordList span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 999px;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  font-size: 11px;
+}
+
+.keywordList span small {
+  font-size: 9px;
+  opacity: .78;
+}
+
+.keywordMatched {
+  background: #ead7df !important;
+  border-color: #d4adbd !important;
+  color: #774f61 !important;
+}
+
+.keywordMissing {
+  background: #f3eff0 !important;
+  border-color: #d9d0d4 !important;
+  color: #84757c !important;
+}
+
+.metricRow strong {
+  color: #7a5063;
+}
+
+.mobileNav {
+  background: rgba(249, 243, 246, .97);
+  border-color: rgba(166, 133, 148, .2);
+  box-shadow: 0 -8px 22px rgba(100, 72, 84, .07);
+}
+
+.mobileNavButtonActive {
+  color: #80556a;
+  background: #ecd7e0;
+}
+
+@media (max-width: 767px) {
+  .brandMark {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brandMark strong {
+    font-size: 19px;
+  }
+
+  .pdfGenerateButton {
+    padding: 7px 9px;
+  }
+}
+
+
+/* ===== V13.1 corrective patch: keep actions visible + strengthen matte pink ===== */
+
+.topActions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.importResumeButton,
+.exportPdfButton,
+.pdfGenerateButton {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.importResumeButton {
+  background:
+    linear-gradient(135deg, #f3e1e8 0%, #ead1db 100%) !important;
+  border-color: #d8aebe !important;
+  color: #754f60 !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.75),
+    0 4px 12px rgba(124,82,100,.09);
+}
+
+.pdfGenerateButton {
+  background:
+    linear-gradient(135deg, #c58ca3 0%, #aa7088 52%, #916078 100%) !important;
+  color: #fff !important;
+  border-color: rgba(121,74,95,.28) !important;
+}
+
+.exportPdfButton {
+  background:
+    linear-gradient(135deg, #704b5c 0%, #8d5c73 100%) !important;
+  border-color: #674453 !important;
+  color: #fff !important;
+}
+
+.panelHeader {
+  border-bottom-color: rgba(179, 137, 155, .28) !important;
+}
+
+.modulePanel .panelHeader,
+.jobPanel .panelHeader {
+  background:
+    linear-gradient(135deg, rgba(248,235,241,.97), rgba(239,220,229,.78)) !important;
+}
+
+.moduleToolbar {
+  background: rgba(250, 245, 247, .86);
+}
+
+@media (max-width: 767px) {
+  .topBar {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .topActions {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .topActions::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topActions .secondaryButton,
+  .importResumeButton,
+  .exportPdfButton,
+  .pdfGenerateButton {
+    display: inline-flex !important;
+  }
+}
+
+
+/* ===== FINAL POLISH — matte rose / mauve UI ===== */
+
+.shell {
+  --myc-rose-25: #fcf8fa;
+  --myc-rose-50: #f8f0f4;
+  --myc-rose-100: #f1e2e9;
+  --myc-rose-200: #e4cbd6;
+  --myc-rose-300: #d3aab9;
+  --myc-rose-400: #bd869d;
+  --myc-rose-500: #a56c84;
+  --myc-mauve-600: #805568;
+  --myc-ink: #332b30;
+  --myc-muted: #81727a;
+  --myc-line: rgba(128, 85, 104, .16);
+  --myc-shadow: rgba(92, 61, 75, .09);
+
+  background:
+    radial-gradient(circle at 12% 0%, rgba(228,203,214,.52), transparent 30%),
+    radial-gradient(circle at 88% 8%, rgba(211,170,185,.28), transparent 27%),
+    #f6f1f3;
+}
+
+.topBar,
+.bottomBar,
+.panelHeader {
+  border-color: var(--myc-line) !important;
+}
+
+.topBar,
+.bottomBar {
+  background: rgba(252,248,250,.94) !important;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 28px var(--myc-shadow);
+}
+
+.brandMark {
+  background:
+    linear-gradient(145deg, #f7e9ef 0%, #ead5de 52%, #d8b4c3 100%) !important;
+  border-color: rgba(157,104,129,.22) !important;
+  color: #735062 !important;
+}
+
+.panel {
+  background: rgba(253,250,251,.91) !important;
+  border-color: rgba(151,112,130,.17) !important;
+}
+
+.panelHeader {
+  background:
+    linear-gradient(180deg, rgba(249,239,244,.96), rgba(252,248,250,.82)) !important;
+}
+
+.primaryButton,
+.pdfGenerateButton,
+.exportPdfButton {
+  border-radius: 10px !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.16),
+    0 6px 18px rgba(128,80,101,.14) !important;
+}
+
+.pdfGenerateButton {
+  background:
+    linear-gradient(135deg, #c48da3 0%, #ad728b 54%, #956176 100%) !important;
+}
+
+.primaryButton,
+.exportPdfButton {
+  background:
+    linear-gradient(135deg, #765061 0%, #8e5d73 100%) !important;
+}
+
+.secondaryButton,
+.iconButton,
+.languageToggle {
+  background: rgba(255,255,255,.72) !important;
+  border: 1px solid rgba(157,120,137,.22) !important;
+}
+
+.languageToggle {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.languageToggle button {
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  padding: 6px 8px;
+  color: #8a7480;
+  font: inherit;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.languageToggle .languageActive {
+  background: #ecd8e1;
+  color: #754f61;
+  box-shadow: inset 0 0 0 1px rgba(150,94,120,.12);
+}
+
+.searchInput:focus,
+.ownerField input:focus,
+.jobTextarea:focus {
+  border-color: #c28aa0 !important;
+  box-shadow: 0 0 0 3px rgba(194,138,160,.13) !important;
+}
+
+.moduleRow:hover {
+  background: rgba(243,228,235,.58) !important;
+}
+
+.liveBadge,
+.counter,
+.pageFitBadge {
+  background: #f0dee6 !important;
+  color: #7c5366 !important;
+}
+
+.previewPanel {
+  background:
+    linear-gradient(180deg, #ece6e9 0%, #e8e2e5 100%) !important;
+}
+
+.keywordMatched {
+  background: #ead5df !important;
+  border-color: #d5aebe !important;
+  color: #754f61 !important;
+}
+
+.keywordMissing {
+  background: #f3eef0 !important;
+  border-color: #d8ced3 !important;
+  color: #83727a !important;
+}
+
+@media (max-width: 767px) {
+  .languageToggle {
+    flex: 0 0 auto;
+  }
+}
+
+/* V2 advanced systems */
+.advancedBlock { margin-top: 14px; padding: 12px; border: 1px solid rgba(157,120,137,.18); border-radius: 12px; background: rgba(255,255,255,.5); }
+.advancedHeader { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:9px; }
+.advancedHeader h3 { margin:0; font-size:12px; }
+.advancedHeader span { font-size:10px; color:#806b76; }
+.recommendationList,.atsList,.focusList,.templateList { display:grid; gap:6px; margin:8px 0; }
+.recommendationRow,.atsRow,.focusRow,.templateRow { display:flex; gap:8px; align-items:flex-start; justify-content:space-between; padding:7px 8px; border-radius:8px; background:rgba(246,239,242,.72); font-size:10px; }
+.recommendationRow div,.atsRow div { min-width:0; display:grid; gap:2px; }
+.recommendationRow strong,.atsRow strong,.focusRow strong { font-size:10px; line-height:1.25; }
+.recommendationRow small,.atsRow small,.focusRow small { color:#81727a; line-height:1.3; }
+.recommendationRow > span { min-width:28px; text-align:right; font-weight:700; color:#765061; }
+.atsRow > span { font-weight:800; width:12px; }
+.focusRow { display:grid; grid-template-columns:1fr auto; }
+.focusRow small { grid-column:1 / -1; }
+.focusRow > span { text-transform:uppercase; font-size:9px; color:#806b76; }
+.compactActions { display:flex; gap:6px; flex-wrap:wrap; }
+.compactFields { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.compactFields input { min-width:0; border:1px solid rgba(157,120,137,.22); border-radius:8px; padding:7px 8px; background:#fff; font:inherit; font-size:10px; }
+.templateRow { align-items:center; }
+.templateRow button { border:0; background:transparent; cursor:pointer; color:#765061; text-align:left; }
+.templateRow button:first-child { flex:1; }
+.draftBox { margin-top:8px; font-size:10px; }
+.draftBox summary { cursor:pointer; color:#765061; font-weight:700; }
+.draftBox textarea { width:100%; min-height:210px; margin-top:8px; resize:vertical; border:1px solid rgba(157,120,137,.22); border-radius:8px; padding:9px; font:inherit; font-size:10px; line-height:1.45; box-sizing:border-box; }
+
+/* V2 right-panel navigation + independent scrolling fix */
+.jobPanel {
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.jobMiniNav {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 8px 10px;
+  border-bottom: 1px solid #eceef1;
+  background: rgba(255, 255, 255, 0.96);
+  scrollbar-width: thin;
+}
+
+.jobMiniNav button {
+  flex: 0 0 auto;
+  border: 1px solid #d7dbe0;
+  border-radius: 999px;
+  background: #fff;
+  color: #4a4f55;
+  padding: 6px 9px;
+  font-size: 10px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.jobMiniNav button:hover,
+.jobMiniNav button:focus-visible {
+  border-color: #8e969f;
+  background: #f7f8f9;
+  outline: none;
+}
+
+.jobPanelScroll {
+  min-height: 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+.jobPanelScroll > .divider {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.jobPanelScroll [data-job-section] {
+  scroll-margin-top: 58px;
+}
+
+@media (max-width: 767px) {
+  .jobPanel {
+    overflow: hidden;
+  }
+
+  .jobPanelScroll {
+    min-height: 0;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+
+  .jobMiniNav {
+    position: relative;
+    z-index: 3;
+    padding: 8px 10px;
+  }
+}
+
+/* Keep the app workspace bounded to the viewport so panel scroll areas can work. */
+.shell {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.jobPanelScroll > .primaryButton,
+.jobPanelScroll > .secondaryButton {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+/* V2-B4 Targeting permission + status layer */
+.priorityActiveButton {
+  background: rgba(176, 129, 20, 0.10);
+  border-color: rgba(176, 129, 20, 0.34);
+  color: #8a650f;
+  font-weight: 800;
+}
+
+.lockActiveButton {
+  background: rgba(84, 94, 110, 0.10);
+  border-color: rgba(84, 94, 110, 0.32);
+}
+
+.attentionWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.attentionBadge {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.attentionWarning {
+  background: #fff4cf;
+  border-color: #e7c85a;
+  color: #7b5b00;
+}
+
+.attentionMissing {
+  background: #ffe7e5;
+  border-color: #dc8d86;
+  color: #9f2f27;
+}
+
+.attentionPopover {
+  position: absolute;
+  z-index: 40;
+  top: 26px;
+  right: 0;
+  width: min(330px, 72vw);
+  padding: 10px 12px;
+  border: 1px solid rgba(80, 70, 75, 0.18);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(40, 34, 38, 0.16);
+  text-align: left;
+  white-space: normal;
+}
+
+.attentionPopover strong,
+.attentionPopover small {
+  display: block;
+}
+
+.attentionPopover strong {
+  margin-bottom: 6px;
+  font-size: 12px;
+}
+
+.attentionPopover small {
+  margin-top: 4px;
+  color: #6f6870;
+  line-height: 1.4;
+}
+
+.skillStrongRow {
+  box-shadow: inset 3px 0 0 rgba(68, 132, 105, 0.55);
+}
+
+.skillRelatedRow {
+  box-shadow: inset 3px 0 0 rgba(92, 119, 157, 0.42);
+}
+
+.skillRecommendBadge,
+.skillRelatedBadge {
+  flex: none;
+  border-radius: 999px;
+  padding: 2px 7px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.skillRecommendBadge {
+  background: rgba(68, 132, 105, 0.12);
+  color: #356e57;
+}
+
+.skillRelatedBadge {
+  background: rgba(92, 119, 157, 0.12);
+  color: #4d6381;
+}
+
+.keywordPartial {
+  background: #fff5d8;
+  border-color: #e4c76a;
+  color: #765d10;
+}
+
+/* B4.6 rowFirst skills: two independent columns avoid a visible empty grid cell for odd category counts. */
+.previewRowFirstColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3px 14px;
+  align-items: start;
+}
+.previewRowFirstColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+.previewRowFirstColumn .previewEntry {
+  margin: 0 !important;
+  break-inside: avoid;
+}
+.previewRowFirstColumn .previewEntry ul {
+  margin-top: 1px !important;
+}
+
+/* B4.6.1: stable row-first Skills. Odd final category is compact full width. */
+.previewRowFirstSkills { display:flex; flex-direction:column; gap:3px; }
+.previewSkillPair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; align-items:start; }
+.previewSkillOdd { width:100%; min-width:0; }
+.previewSkillOdd .previewEntry { margin-bottom:0 !important; }
+
+/* B4.6.2.3 Recommendation-first targeting mode */
+.targetingModeBox {
+  display: grid;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid rgba(100, 116, 139, 0.22);
+  border-radius: 10px;
+  background: rgba(248, 250, 252, 0.7);
+}
+
+.targetingModeOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.targetingModeOption > input {
+  margin-top: 3px;
+}
+
+.targetingModeOption > span {
+  display: grid;
+  gap: 2px;
+}
+
+.targetingModeOption small {
+  color: #64748b;
+  line-height: 1.35;
+}
+
+
+/* B5 final-delivery affordances */
+.fixedTextBadge {
+  flex: none;
+  padding: 2px 6px;
+  border: 1px solid rgba(84, 94, 110, 0.28);
+  border-radius: 999px;
+  background: rgba(84, 94, 110, 0.08);
+  color: #5b6572;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.mobileExportButton {
+  font-weight: 800;
+}
+
+@media (max-width: 767px) {
+  /* Final delivery must remain reachable without horizontally scrolling the top bar. */
+  .topActions .exportPdfButton {
+    display: none !important;
+  }
+
+  .mobileNav {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* B6 Application Assistant — presentation only; no Targeting semantics. */
+.applicationSummary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:6px; margin:9px 0; }
+.applicationSummary > div { border:1px solid rgba(157,120,137,.18); border-radius:8px; padding:7px; background:rgba(255,255,255,.7); display:grid; gap:2px; }
+.applicationSummary strong { font-size:13px; }
+.applicationSummary small { font-size:9px; color:#806b76; }
+.applicationDetails { border-top:1px solid rgba(157,120,137,.14); padding-top:7px; margin-top:7px; font-size:10px; }
+.applicationDetails summary { cursor:pointer; color:#765061; font-weight:700; }
+.applicationWarnings { display:grid; gap:5px; margin:7px 0; }
+.applicationWarnings p { margin:0; padding:6px 7px; border-radius:7px; background:rgba(157,120,137,.07); font-size:9px; line-height:1.4; }
+.applicationOptions { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:8px 0; }
+.applicationOptions label { display:grid; gap:3px; font-size:9px; color:#806b76; }
+.applicationOptions select { min-width:0; border:1px solid rgba(157,120,137,.22); border-radius:8px; padding:6px; background:#fff; font:inherit; font-size:10px; }
+.applicationNotes { width:100%; min-height:86px; margin-top:8px; resize:vertical; border:1px solid rgba(157,120,137,.22); border-radius:8px; padding:8px; box-sizing:border-box; font:inherit; font-size:10px; line-height:1.45; }
+.applicationChecklist { display:grid; gap:4px; margin:8px 0; font-size:9px; }
+.applicationChecklist > div { display:grid; grid-template-columns:14px 1fr; gap:4px; align-items:start; }
+.draftBox small { display:block; margin-top:5px; color:#806b76; }
+@media (max-width: 700px) { .applicationOptions,.compactFields { grid-template-columns:1fr; } }
+
+/* B6.2 template labels: presentation-only UI; no resume semantics. */
+.templateMainButton {
+  min-width: 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+}
+
+.templateTitleLine {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.templateBadge {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 1px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: .02em;
+}
+
+.templateDescription {
+  opacity: .72;
+  font-size: 11px;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+/* B6.2.1 built-in template clarity: built-ins are first-class presets, not import fixtures. */
+.templateGroup { display:grid; gap:6px; margin-top:8px; }
+.templateGroupHeader { display:flex; align-items:center; justify-content:space-between; gap:8px; color:#765061; font-size:10px; }
+.templateGroupHeader small { opacity:.66; font-weight:500; }
+.templateRowActive { outline:1px solid rgba(118,80,97,.38); background:rgba(246,239,242,.98); }
+.templateActiveBadge { display:inline-flex; width:fit-content; border-radius:999px; padding:1px 6px; background:rgba(118,80,97,.12); color:#765061; font-size:10px; font-weight:700; line-height:1.4; }
+
+
+/* V1 usability pass: full-text editing and opt-in compact short-skill layout. */
+.editingLabel {
+  color: #59616a;
+  font-size: 11px;
+  font-weight: 650;
+}
+.expandedEditorWrap {
+  margin: 6px 12px 10px 74px;
+  padding: 8px;
+  border: 1px solid #d9dde2;
+  border-radius: 8px;
+  background: #fafbfc;
+}
+.expandedEditor {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 92px;
+  resize: vertical;
+  border: 1px solid #aeb5bd;
+  border-radius: 6px;
+  padding: 8px 9px;
+  background: #fff;
+  color: #17191c;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.45;
+  outline: none;
+}
+.expandedEditor:focus { border-color: #59616a; box-shadow: 0 0 0 2px rgba(57,65,75,.08); }
+.expandedEditorActions { display:flex; justify-content:flex-end; align-items:center; gap:6px; margin-top:6px; }
+.expandedEditorActions span { margin-right:auto; color:#777c83; font-size:10px; }
+.expandedEditorActions button { border:1px solid #d7dbe0; border-radius:5px; background:#fff; padding:4px 8px; font-size:11px; cursor:pointer; }
+.compactSkillControl { display:inline-flex; align-items:center; gap:4px; white-space:nowrap; font-size:10px; color:#59616a; padding:2px 5px; border:1px solid #d9dde2; border-radius:6px; background:#fff; }
+.compactSkillControl input { margin:0; }
+
+.previewAlignedRow { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.previewAlignedRow > :last-child { text-align:right; }
+.previewCompactSkills { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:12px; }
+
+/* V4 compact skills: preserve every selected item and original order. Only adjacent short skills share a row. */
+.previewCompactSkillRows { display:flex; flex-direction:column; gap:1px; margin-top:1px; }
+.previewCompactSkillPairRow { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); column-gap:12px; }
+.previewCompactSkillFullRow { display:grid; grid-template-columns:minmax(0,1fr); }
+.previewCompactSkillCell { min-width:0; }
